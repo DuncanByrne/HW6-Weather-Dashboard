@@ -6,40 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Domine&family=Ramabhadra&display=swap" rel="stylesheet">
+        <!-- add google fonts -->
+   
     <link rel="stylesheet" href="style.css">
    
     <title>Weather Dashboard</title>
 </head>
 <!-- header -->
-<header class="container text-center bg-dark text-white p-2">
+<header>
     <h1>Weather Dashboard</h1>
 </header>
-<div class="container carousel-item-left">
-    <!-- add class -->
-    <div class="row ">
-        <div class="col-9 citySearch">
-            <div class="row col-md-10">
-                 
-                <h2>Enter City Name</h2>
-                <!-- lets us search for the city we want  -->
-                <input type="text" placeholder="Search for City">
-                <button type="submit">Submit</button>
-            </div>
-            <!-- weather cards-->
-            <div class="forecastCard">
-                <h3>Today's Forecast</h3>
-                <ul id="currentWeather">
-                    <li>Tempature</li>
-                    <li>Wind</li>
-                    <li>Hummidity</li>
-                    <li>UV Index</li>
-                </ul>
-            </div>
+<!-- search and clear -->
+<div class="row">
+    <div class="col-sm-3">
+        <form id="search-cities">
+            <h2>Search</h2>
+            <input type="text" id="city">
+            <button id="city-search"><i class="fas fa-search-location"></i></button>
+        </form>
+        <h2 class="search">Previous Locations</h2>
+        <button id="clear-history">Clear</button>
+        <div class="col" id="search-history">
+            <div class="container" id="container"></div>
         </div>
     </div>
-    <div class="container text-center"   id="futureForecast">
-        <h3>Upcoming 5 Day Forecast</h3>
+                <!-- current -->
+    <div class="col-sm-10" id="weather-info">
+        <div class="cardWeather" id="card-weather">
+            <div class="cards">
+                <h2 class="card-title"></h2>
+                <p class="card-text" id="tempature"></p>
+                <p class="card-text" id="humidity"></p>
+                <p class="card-text" id="uv-index"></p>
+                <p class="card-text" id="wind"></p>
+            </div>
+        </div>
+        <!-- future -->
+        <h2 id="futureForecast"></h2>
+        <div class="row" id="future"></div>
     </div>
+
 </div>
 <body>
     

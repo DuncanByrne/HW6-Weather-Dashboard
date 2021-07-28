@@ -1,3 +1,22 @@
 body {
   background-color: whitesmoke;
+  font-family: ramabhadra;
+}
+
+header {
+  background-color: mediumblue;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.row {
+  margin-left: 15px;
+}
+
+.search {
+  margin-top: 50px;
+}
+
+.weather {
+  display: none;
 }
